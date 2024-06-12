@@ -1,0 +1,9 @@
+2024-06-12 14:42:49,433 First few rows of data:
+   Temperature  Humidity  Pressure  Wind Speed Weather Description  Soil Moisture
+0        35.36       9.0      1006        4.12           clear sky      32.483571
+1        34.50      10.0      1008        3.50           clear sky      29.308678
+2        33.80      11.0      1010        3.20           clear sky      33.238443
+3        32.60      12.0      1012        2.80       partly cloudy      37.615149
+4        31.70      14.0      1015        2.50       partly cloudy      28.829233
+2024-06-12 14:42:49,669 Mean Squared Error: 7.927745486242182
+2024-06-12 14:42:49,786 Model and scaler saved successfully.
