@@ -17,9 +17,13 @@ def home():
 @app.route('/predict', methods=['GET'])
 def predict():
     if model:
-        # Replace this with actual prediction logic
-        prediction = model.predict([[1, 2, 3, 4]])  # Example input
-        return jsonify(prediction.tolist())
+        # Example input features for prediction
+        example_input = [[1, 2, 3, 4]]  # Replace with actual input format
+        try:
+            prediction = model.predict(example_input)
+            return jsonify(prediction.tolist())
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
     else:
         return jsonify({"error": "Model not loaded"}), 500
 
