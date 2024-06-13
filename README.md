@@ -1,32 +1,50 @@
-# Irrigation Prediction
+# Irrigation Prediction App
 
-## Overview
-This project predicts soil moisture based on weather data using a machine learning model.
+## Description
+This project is an irrigation prediction app that uses a machine learning model to predict soil moisture levels based on input features. The application is deployed on Heroku.
 
-## Setup Instructions
+## Features
+- Predict soil moisture levels using a trained model
+- Easy-to-use API for predictions
+
+## Installation
 
 ### Prerequisites
-- Python 3.x
-- Required Python packages (install using `pip install -r requirements.txt`)
+- Python 3.9
+- pip
 
-### Data Fetching
-1. **`fetch_weather_data.py`**: Fetches weather data and appends it to `weather_data.csv`.
-2. **`run_weather_script.bat`**: Batch file to run the data fetching script.
+### Clone the Repository
+```bash
+git clone https://github.com/yourusername/irrigation-prediction.git
+cd irrigation-prediction
 
-### Model Training
-1. **`train_model.py`**: Preprocesses data and trains the machine learning model.
+Install Dependencies
 
-### Prediction
-1. **`predict_soil_moisture.py`**: Uses the trained model to make predictions based on new weather data.
+bash
+pip install -r requirements.txt
+Usage
 
-## Usage
+Run the Application
 
-1. **Set up Task Scheduler** to run `run_weather_script.bat` at desired intervals.
-2. **Run `train_model.py`** to train the model periodically.
-3. **Run `predict_soil_moisture.py`** to make predictions.
+bash
+python app.py
+Predict Soil Moisture
+Send a POST request to the /predict endpoint with input features:
 
-## Example Output
-Include example outputs and usage tips.
+bash
+curl -X POST -H "Content-Type: application/json" -d "{\"features\": [1, 2, 3, 4]}" https://irrigation-prediction-d56529386fb6.herokuapp.com/predict
+Deployment
+Deploy on Heroku
+Create a new Heroku app:
 
-## License
-[Specify your license here]
+bash
+heroku create
+Push your code to Heroku:
+
+bash
+git push heroku main
+
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+
