@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import joblib
+import os
 
 app = Flask(__name__)
 
@@ -12,17 +13,15 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    if model:
-        try:
-            # Extract features from the request
-            data = request.get_json(force=True)
-            features = data['features']
-            prediction = model.predict([features])
-            return jsonify(prediction.tolist())
-        except Exception as e:
-            return jsonify({"error": str(e)}), 500
-    else:
-        return jsonify({"error": "Model not loaded"}), 500
+    try:
+        # Extract features from the request
+        data = request.get_json(force=True)
+        features = data['features']
+        prediction = model.predict([features])
+        return jsonify(prediction.tolist())
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
