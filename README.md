@@ -1,3 +1,6 @@
+
+# Thank you for viewing my test project. 
+
 # Irrigation Prediction App
 
 ## Description
@@ -18,33 +21,35 @@ This project is an irrigation prediction app that uses a machine learning model 
 git clone https://github.com/yourusername/irrigation-prediction.git
 cd irrigation-prediction
 
-Install Dependencies
+# Install Dependencies
 
-bash
 pip install -r requirements.txt
-Usage
 
-Run the Application
+# Usage
 
-bash
+# Run the Application
+
 python app.py
-Predict Soil Moisture
-Send a POST request to the /predict endpoint with input features:
 
-bash
+
+# Predict Soil Moisture
+## Send a POST request to the /predict endpoint with input features:
+
 curl -X POST -H "Content-Type: application/json" -d "{\"features\": [1, 2, 3, 4]}" https://irrigation-prediction-d56529386fb6.herokuapp.com/predict
-Deployment
-Deploy on Heroku
-Create a new Heroku app:
 
-bash
+# Deployment
+## Deploy on Heroku
+### Create a new Heroku app:
+
 heroku create
-Push your code to Heroku:
 
-bash
+### Push your code to Heroku:
+
 git push heroku main
 
-Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+# Contributing
+## Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
+# License
+## This project is licensed under the MIT License - see the LICENSE file for details.
 
