@@ -1,5 +1,5 @@
-echo Flask==3.0.3 > requirements.txt
-echo waitress==3.0.0 >> requirements.txt
-echo pandas==1.4.3 >> requirements.txt
-echo scikit-learn==1.1.1 >> requirements.txt
-echo joblib==1.1.0 >> requirements.txt
+Flask==3.0.3
+waitress==3.0.0
+pandas==1.4.3
+scikit-learn==1.1.1
+joblib==1.1.0
